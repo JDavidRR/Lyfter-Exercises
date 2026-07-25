@@ -1,0 +1,8 @@
+1 - Crea una carpeta en el escritorio llamada Proyectos
+
+2 - Dentro de la carpeta Proyectos, crea un archivo de texto llamado ideas.txt
+
+3 - Investiga el comando adecuado para escribir dentro del archivo ideas.txt la frase: "Este es mi primer archivo.".
+
+4 - Muestra en pantalla el contenido del archivo ideas.txt
+ - Use un comando que permita leer archivos desde la terminal (por ejemplo: cat)
