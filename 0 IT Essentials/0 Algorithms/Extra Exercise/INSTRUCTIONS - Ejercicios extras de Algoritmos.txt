@@ -1,0 +1,30 @@
+Ejercicios de Terminales
+IT Essentials
+
+🧠
+Un pequeño reto
+Ya dominas algunos de estos comandos por la lección anterior, para completar estos ejercicios vas a tener que investigar algunos nuevos por tu cuenta. Este proceso de búsqueda y descubrimiento es parte fundamental de tu aprendizaje y, sobre todo, ¡es parte de la diversión de convertirte en desarrollador!
+
+1- En el escritorio (/Desktop), crea tres carpetas nombradas Empleado1, Empleado2 y Empleado3.
+
+2- Dentro de cada carpeta (creadas en el punto 1), crea los siguientes archivos de texto:
+	1. En Empleado1 crea el archivo bienvenida1.txt
+	2. En Empleado2 crea el archivo bienvenida2.txt
+	3. En Empleado3 crea el archivo bienvenida3.txt
+
+3- Crea una carpeta en /Desktop llamada Empleados la cual debe contener las carpetas creadas anteriormente. Mueve las carpetas del punto 1 a Empleados.
+
+4- Lista los procesos en el sistema.
+
+5- En una terminal aparte ejecuta el comando ping a Google.
+6- Abre una aplicación sencilla en la computadora (como la Calculadora, el Bloc de notas o TextEdit). Desde la terminal, lista los procesos, encuentra el ID de esa aplicación y ejecuta el comando adecuado para terminar ese proceso.
+7- Visualiza la hora del sistema operativo a través de la Terminal.
+8- Renombra cada uno de los archivos de texto creados en el punto 2 a welcome.txt.
+9- Elimina la carpeta Empleados creada en el punto 3. (Si el comando arroja un error porque la carpeta no está vacía, investiga qué alternativas o flags se pueden usar para lograr eliminar la carpeta junto con todo lo que tenga dentro).
+Entrega final:
+10- Debes crear un documento en formato PDF que contenga lo siguiente:
+	-> Cada comando que hayas ejecutado, escrito claramente.
+	-> Una captura de pantalla para cada paso, donde se muestre la ejecución del comando y el resultado obtenido.
+
+💡
+Es importante que el documento esté organizado paso por paso (del 1 al 9), para que se pueda validar que cada actividad fue realizada correctamente.

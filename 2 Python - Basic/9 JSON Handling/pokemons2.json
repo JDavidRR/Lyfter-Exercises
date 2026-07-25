@@ -1,0 +1,179 @@
+[
+    {
+        "name":"Pikachu",
+        "type":"Electric",
+        "level":54,
+        "weight_kg":6.0,
+        "is_shiny":false,
+        "held_item":null,
+        "skills":[
+            "Thunder Shock",
+            "Quick Attack",
+            "Thunderbolt",
+            "Volt Tackle"
+        ],
+        "stats":{
+            "hp":35,
+            "attack":55,
+            "defense":40,
+            "sp_attack":50,
+            "sp_defense":50,
+            "speed":90
+        }
+    },
+    {
+        "name":"Charmander",
+        "type":"Fire",
+        "level":8,
+        "weight_kg":8.5,
+        "is_shiny":true,
+        "held_item":"Charcoal",
+        "skills":[
+            "Ember",
+            "Scratch",
+            "Tackle",
+            "Smokescreen"
+        ],
+        "stats":{
+            "hp":39,
+            "attack":52,
+            "defense":43,
+            "sp_attack":60,
+            "sp_defense":50,
+            "speed":65
+        }
+    },
+    {
+        "name": "Squirtle",
+        "type": "Water",
+        "level": 20,
+        "weight_kg": 9.0,
+        "is_shiny": false,
+        "held_item": "Mystic Water",
+        "skills": [
+            "Water Gun",
+            "Tackle",
+            "Withdraw",
+            "Bubble"
+        ],
+        "stats": {
+            "hp": 44,
+            "attack": 48,
+            "defense": 65,
+            "sp_attack": 50,
+            "sp_defense": 64,
+            "speed": 43
+        }
+    },
+    {
+        "name": "Bulbasaur",
+        "type": "Grass/Poison",
+        "level": 15,
+        "weight_kg": 6.9,
+        "is_shiny": false,
+        "held_item": "Miracle Seed",
+        "skills": [
+            "Vine Whip",
+            "Tackle",
+            "Growl",
+            "Leech Seed"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 49,
+            "defense": 49,
+            "sp_attack": 65,
+            "sp_defense": 65,
+            "speed": 45
+        }
+    },
+    {
+        "name": "Abra",
+        "type": "Psychic",
+        "level": 12,
+        "weight_kg": 19.5,
+        "is_shiny": false,
+        "held_item": "Twisted Spoon",
+        "skills": [
+            "Teleport",
+            "Confusion",
+            "Disable",
+            "Psybeam"
+        ],
+        "stats": {
+            "hp": 25,
+            "attack": 20,
+            "defense": 15,
+            "sp_attack": 105,
+            "sp_defense": 55,
+            "speed": 90
+        }
+    },
+    {
+        "name": "Onix",
+        "type": "Rock/Ground",
+        "level": 22,
+        "weight_kg": 210.0,
+        "is_shiny": false,
+        "held_item": "Hard Stone",
+        "skills": [
+            "Rock Throw",
+            "Bind",
+            "Sandstorm",
+            "Earthquake"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 45,
+            "defense": 160,
+            "sp_attack": 30,
+            "sp_defense": 45,
+            "speed": 70
+        }
+    },
+    {
+        "name": "Sneasel",
+        "type": "Dark/Ice",
+        "level": 28,
+        "weight_kg": 28.0,
+        "is_shiny": true,
+        "held_item": "Never-Melt Ice",
+        "skills": [
+            "Ice Punch",
+            "Feint Attack",
+            "Agility",
+            "Slash"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 95,
+            "defense": 55,
+            "sp_attack": 35,
+            "sp_defense": 75,
+            "speed": 115
+        }
+    },
+    {
+    "name": "Vulpix",
+    "type": "Fire",
+    "level": 16,
+    "weight_kg": 9.9,
+    "is_shiny": false,
+    "held_item": "Charcoal",
+    "skills": [
+        "Ember",
+        "Quick Attack",
+        "Roar",
+        "Will-O-Wisp"
+    ],
+    "stats": {
+        "hp": 38,
+        "attack": 41,
+        "defense": 40,
+        "sp_attack": 50,
+        "sp_defense": 65,
+        "speed": 65
+    }
+}
+]
+

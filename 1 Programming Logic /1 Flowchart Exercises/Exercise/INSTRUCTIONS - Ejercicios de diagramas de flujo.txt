@@ -1,0 +1,37 @@
+Cree diagramas de flujo de los ejercicios de Pseudocódigo previamente creados:
+
+Cree un pseudocódigo que le pida un precio de producto al usuario, calcule su descuento y muestre el precio final
+tomando en cuenta que:
+Si el precio es menor a 100, el descuento es del 2%.
+Si el precio es mayor o igual a 100, el descuento es del 10%.
+Ejemplos:
+120 → 108
+40 → 39.2
+
+Cree un pseudocódigo que le pida un tiempo en segundos al usuario y calcule si es menor o mayor a 10 minutos.
+Si es menor, muestre cuantos segundos faltarían para llegar a 10 minutos.
+Si es mayor, muestre “Mayor”.
+Si es exactamente igual, muestre “Igual”.
+Ejemplos:
+1040 → Mayor
+140 → 460
+600 → Igual
+599 → 1
+
+Cree un algoritmo que le pida un numero al usuario, y realice una suma de cada numero del 1 hasta ese número ingresado.
+Luego muestre el resultado de la suma.
+Ejemplos:
+5 → 15 (1 + 2 + 3 + 4 + 5)
+3 → 6 (1 + 2 + 3)
+12 → 78 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12)
+
+Cree un diagrama de flujo que tenga un numero secreto del 1 al 10, y le pida al usuario adivinar ese número.
+El algoritmo no debe terminar hasta que el usuario adivine el numero.
+
+Cree un diagrama de flujo que pida 3 números al usuario.
+Si uno de esos números es 30, o si los 3 sumados dan 30, mostrar “Correcto”.
+Sino, mostrar “incorrecto”.
+Ejemplos:
+23, 30, 768 → Correcto (hay un 30)
+10, 15, 5 → Correcto (10 + 15 + 5 = 30)
+35, 56, 2 → Incorrecto (no hay ningún 30, y la suma de ellos tampoco da 30)
