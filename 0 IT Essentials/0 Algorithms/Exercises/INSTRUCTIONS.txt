@@ -1,0 +1,5 @@
+1 - Cree un algoritmo para ver un video en Youtube.
+Sea lo más especifico posible.
+
+2 - Cree un algoritmo que describa su rutina diaria.
+Use condiciones, condiciones multiples y ciclos.

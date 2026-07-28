@@ -1,4 +1,4 @@
-Ejercicios extras de Algoritmos
+Ejercicios extra de Algoritmos
 IT Essentials
 
 1- Cree un algoritmo como preparar una fiesta sorpresa para un amigo o familiar. Considere si la persona está en casa o no, si los invitados ya llegaron o no, qué hacer mientras esperan, y cómo finaliza la fiesta.

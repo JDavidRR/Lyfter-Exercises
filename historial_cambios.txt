@@ -1,0 +1,49 @@
+commit a1d0175d346fef1a246d50752f7db19329565ce2
+Author: JDavidRR <jdavid.rojasr@icloud.com>
+Date:   Thu Jul 23 10:49:39 2026 -0600
+
+    Initial commit
+
+# This commit was automatically created by Git when the repository was initialized.
+
+
+commit 5325a37ab572c39b4995c3b9de4f0f380aef6f5c (origin/completed-exercises, completed-exercises)
+Author: JDavidRR <jdavid.rojasr@icloud.com>
+Date:   Sat Jul 25 17:07:01 2026 -0600
+
+    Initial commit: Completed exercises from first modules of Lyfter course
+
+# This was my first manual pull request (PR), where I uploaded all completed exercises for review.
+
+
+commit 7c39462ff0ada35681da80145ffea2b461d5b9be
+Merge: a1d0175 5325a37
+Author: JDavidRR <jdavid.rojasr@icloud.com>
+Date:   Sat Jul 25 17:25:37 2026 -0600
+
+    Merge pull request #1 from JDavidRR/completed-exercises
+    
+    Initial commit: Completed exercises from first modules of Lyfter course
+
+# This merge integrated all the changes (completed exercises) from the branch `completed-exercises` into the main branch.
+
+
+commit cff51d3174582d4981df7587e2c5e41cd7a72f0f (origin/past-exercises, past-exercises)
+Author: JDavidRR <jdavid.rojasr@icloud.com>
+Date:   Sun Jul 26 12:04:17 2026 -0600
+
+    Add / Restructure modules: separated exercises into individual files
+
+# This new PR introduced changes to the structure and files of existing exercises, all implemented in the branch `past-exercises`.
+
+
+commit fb6f03a7daa7ffa62533745b4653ae9a6658e917 (HEAD -> main, origin/main, origin/HEAD)
+Merge: 7c39462 cff51d3
+Author: JDavidRR <jdavid.rojasr@icloud.com>
+Date:   Mon Jul 27 16:35:00 2026 -0600
+
+    Merge pull request #2 from JDavidRR/past-exercises
+    
+    Add / Restructure modules: separated exercises into individual files
+
+# This final merge applied the changes from the last PR, ensuring that the exercise structure in the repository now follows Lyfter’s standards.
