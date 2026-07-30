@@ -3,8 +3,8 @@ import menu
 
 def execute():
     menu.clear_screen()
-    file_name = "students.csv"
-    students = data.import_database_csv(file_name)
+    file_path = "students.csv"
+    students = data.import_database_csv(file_path)
     option = 0
     while option != 9:
             menu.clear_screen()
