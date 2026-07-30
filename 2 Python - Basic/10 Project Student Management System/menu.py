@@ -27,18 +27,6 @@ def clear_screen():
         sys.stdout.flush()
 
 
-"""
-1 - Ingresar estudiantes
-2 - Mostrar estudiantes (Mostrar todos)
-3 - Ver top 3 mejores promedio
-4 - Ver promedios (es decir, el promedio de notas de cada uno)
-5 - Eliminar estudiante
-6 - Ver estudiantes reprobados (nombre, sección y las materias reprobadas con sus notas.)
-7 - Exportar todos los datos
-8 - Importar datos (Si no hay un archivo previamente exportado, debe informárselo al usuario.)
-"""
-
-
 def main_menu():
     clear_screen()
     print(f"""\n\nStudent Management System\n
@@ -142,11 +130,15 @@ def ask_students(students_list):
             input(f"\nThe student {new_student['Name']} already exists in section {new_student['Section']}, please try again...")
 
 
-def show_students(students_list):
+def show_student(student:dict):
+    print(f"\nName: {student['Name']}\nSection: {student['Section']}\nSpanish Grade: {student['Spanish']}\tEnglish Grade: {student['English']}\tSocial Studies Grade: {student['Social Studies']}\tScience Grade: {student['Science']}")
+
+
+def show_students(students_list:list):
     if not students_list:
         print("There are not students")
     for student in students_list:
-        print(f"Name: {student['Name']}\n Section: {student['Section']}\nSpanish Grade: {student['Spanish']}\nEnglish Grade: {student['English']}\nSocial Studies Grade: {student['Social Studies']}\nScience Grade: {student['Science']}\n\n")
+        show_student(student)
     input("\nHit enter to continue...")
 
 
@@ -168,12 +160,25 @@ def ask_average_grade(subject):
             input("Please try again...\n")
 
 
+def tops_three_average (students_list: list[dict[str]]):
+    students_temporal_list:list[(dict,float)] = actions.calculate_averages(students_list)[:3]
+    print("Top students:\n")
+    for student_tuple in students_temporal_list:
+        show_student(student_tuple[0])
+        print(f"Total Average grade: {student_tuple[1]}")
+    input("\nPress Enter to continue")
 
-#def tops_three_average (students_list)
+
+def show_all_average (students_list: list[dict[str]]):
+    students_temporal_list:list[(dict,float)] = actions.calculate_averages(students_list)
+    for student_tuple in students_temporal_list:
+            show_student(student_tuple[0])
+            print(f"Total Average grade: {student_tuple[1]}")
+    input("\nPress Enter to continue")
 
 
-#def show_all_average (students_list)
-
-
-#def show_failed_students(students_list)
+def show_failed_students(students_list: list[dict[str]]):
+    students_temporal_list = actions.list_failed_students(students_list)
+    print("List of students that reproved at least one subject\n")
+    show_students(students_temporal_list)
 

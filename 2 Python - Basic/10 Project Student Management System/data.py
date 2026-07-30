@@ -4,6 +4,7 @@ import csv
 def import_database_csv(file_path):
     try:
         with open(file_path,"r",encoding="utf-8") as file:
+            input(f"Data imported successfully from path \"{file_path}\". Hit enter to continue...")
             reader = csv.DictReader(file)
             return list(reader)
     except FileNotFoundError as ex:
@@ -18,9 +19,9 @@ def import_database_csv(file_path):
 
 def export_database_csv(file_path,list_param):
     with open(file_path,"w",encoding="utf-8", newline="") as file:
-        headers = ["Name", "Section", "Spanish", "English", "Social Studies", "Science"]
+        headers = list_param[0].keys()
         writer = csv.DictWriter(file,fieldnames=headers)
         writer.writeheader()
         writer.writerows(list_param)
-
+    input(f"Data exported successfully, path \"{file_path}\". Hit enter to continue...")
 

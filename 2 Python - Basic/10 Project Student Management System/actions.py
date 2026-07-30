@@ -1,7 +1,10 @@
 import data
 import menu
 
-def execute(students,file_path):
+def execute():
+    menu.clear_screen()
+    file_name = "students.csv"
+    students = data.import_database_csv(file_name)
     option = 0
     while option != 9:
             menu.clear_screen()
@@ -9,7 +12,7 @@ def execute(students,file_path):
             option = menu.validate_option()
             menu.clear_screen()
             if option == 1:
-                menu.insert_students (students)
+                menu.ask_students (students)
             elif option == 2:
                 menu.show_students (students)
             elif option == 3:
@@ -23,7 +26,7 @@ def execute(students,file_path):
             elif option == 7:
                 data.export_database_csv(file_path,students)
             elif option == 8:
-                data.import_database_csv(file_path)
+                students = data.import_database_csv(file_path)
             else:
                 menu.clear_screen()
                 print("Thank you!")
@@ -52,11 +55,11 @@ def is_valid_section(section):
         return True
 
 
-def student_exists(students_list:list[dict], student_name: str,student_section: str):
+def student_exists(students_list: list[dict], student_name: str,student_section: str):
     for student in students_list:
         if student['Name'] == student_name and student['Section'] == student_section:
-            return True
-    return False
+            return True, student
+    return False, {}
 
 
 def create_student(students_list):
@@ -71,7 +74,8 @@ def create_student(students_list):
     lastname = menu.ask_name(False)
     section = menu.ask_section()
     name += " " + lastname
-    if not student_exists(students_list,name,section):
+    exist, student = student_exists(students_list,name,section)
+    if not exist:
         spanish_grade = menu.ask_average_grade('Spanish')
         english_grade = menu.ask_average_grade('English')
         social_studies_grade = menu.ask_average_grade('Social Studies')
@@ -84,15 +88,39 @@ def create_student(students_list):
         'Science' : science_grade}
         return new_student, False
     else:
-        new_student = {
-            "Name": name,
-            "Section": section,
-            "Spanish": 0.0,
-            "English": 0.0,
-            "Social Studies": 0.0,
-            "Science": 0.0
-        }
-        return new_student, True
+        return student, True
 
 
-#def delete_student (students_list)
+def delete_student (students_list: list[dict[str]]):
+    name = menu.ask_name(True)
+    lastname = menu.ask_name(False)
+    name += " " + lastname
+    section = menu.ask_section()
+    exist, student = student_exists(students_list,name,section)
+    if not exist:
+        print(f"There are no results for search name: {name} and section: {section}")
+    else:
+        students_list.remove(student)
+        print(f"The student \"{student['Name']}\" from section \"{student['Section']}\" was removed successfully")
+    input("Hit Enter to continue...")
+
+
+def calculate_averages(students_list: list[dict[str]]):
+    list_averages =[]
+    for student in students_list:
+        average = (float(student['Spanish']) + float(student['English']) + float(student['Social Studies']) + float(student['Science'])) / 4
+        my_tuple = (student,average)
+        list_averages.append(my_tuple)
+    return sorted(list_averages, key = lambda x:x[1],reverse = True)
+
+
+def list_failed_students(students_list: list[dict[str]]):
+    students_temporal_list = []
+    for student in students_list:
+        if int(student['Section'][:-1]) < 10:
+            if float(student['Spanish']) < 65 or float(student['English']) < 65 or float(student['Social Studies']) < 65 or float(student['Science']) < 65:
+                students_temporal_list.append(student)
+        else:
+            if float(student['Spanish']) < 70 or float(student['English']) < 70 or float(student['Social Studies']) < 70 or float(student['Science']) < 70:
+                students_temporal_list.append(student)
+    return students_temporal_list
