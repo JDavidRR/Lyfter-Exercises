@@ -6,12 +6,22 @@ Cree una clase de Circle con:
 from math import pi
 
 class Circle ():
-    radius = 0
+    radius = 1
+
+    
     def __init__(self,radius_param):
         self.radius = radius_param
+
 
     def get_area(self):
         return pi * (self.radius ** 2)
 
-my_circle = Circle(10)
-print (my_circle.get_area())
+
+def main():
+    my_circle = Circle(10)
+    print (f"El area del circulo es: {my_circle.get_area()}")
+
+
+if __name__ == "__main__":
+    main()
+
