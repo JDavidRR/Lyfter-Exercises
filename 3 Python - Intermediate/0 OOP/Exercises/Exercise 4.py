@@ -72,4 +72,4 @@ def main ():
 	torso = Torso(head,right_arm,left_arm,right_leg,left_leg)
 	Juan = Human(torso,"Juan")
 
-    
+

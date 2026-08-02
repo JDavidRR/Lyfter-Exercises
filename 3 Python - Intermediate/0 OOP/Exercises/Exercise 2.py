@@ -12,12 +12,9 @@ class Person():
 		self.name = name
 
 class Bus():
-    max_passengers = 78
-    passengers = []
-
-
-    def __init__(self,max_passengers = 78):
-        self.max_passengers = max_passengers
+    def __init__(self, capacity = 78):
+        self.passengers = []
+        self.max_passengers = capacity
 
 
     def add_passenger(self, passenger : Person):
