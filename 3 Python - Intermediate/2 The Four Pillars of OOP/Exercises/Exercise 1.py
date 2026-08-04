@@ -39,9 +39,9 @@ class BankAccount():
             print(f"Error [InsufficientFundsError]: {e}")
 
 
-class SavingsAccount():
+class SavingsAccount(BankAccount):
     def __init__(self,balance,min_balance):
-        self.balance = balance
+        BankAccount.__init__(self, balance)
         self.min_balance = min_balance
 
     def withdraw(self, amount):
@@ -53,7 +53,6 @@ class SavingsAccount():
                 raise InsufficientFundsError(amount, self.balance, self.min_balance)
         except InsufficientFundsError as e:
             print(f"Error [InsufficientFundsError]: {e}")
-        
 
 
 def main():
