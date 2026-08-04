@@ -42,17 +42,13 @@ class Rectangle():
 
     def ask_attributes(self):
         try:
-            height = str(input("Insert the height: "))
-            width = str(input("Insert the width: "))
-            if not height.isnumeric():
-                raise ValueError(height)
-            if not width.isnumeric():
-                raise ValueError(width)
-            if float(height) <= 0:
+            height = float(input("Insert the height: "))
+            width = float(input("Insert the width: "))
+            if height <= 0:
                 raise NotAllowedNumberError(height)
-            elif float(width) <= 0:
+            elif width <= 0:
                 raise NotAllowedNumberError(width)
-            return float(width),float(height)
+            return width, height
         except NotAllowedNumberError as ex:
             print(f"Error [NotAllowedNumberError]: {ex}\n")
             return self.ask_attributes()

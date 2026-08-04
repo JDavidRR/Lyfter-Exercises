@@ -14,7 +14,7 @@ class Animal():
         self.name = name
 
     def speak(self):
-        print("Makes a sound.")
+        return "Makes a sound."
 
 
 class Dog(Animal):
@@ -23,7 +23,7 @@ class Dog(Animal):
 
 
     def speak(self):
-        print("Woof!")
+        return "Woof!"
 
 
 class Cat(Animal):
@@ -31,14 +31,14 @@ class Cat(Animal):
         super().__init__(name)
 
     def speak(self):
-        print("Meow!")
+        return "Meow!"
 
 
 def main():
     my_dog = Dog("Firu")
     my_cat = Cat("Michi")
-    my_dog.speak()
-    my_cat.speak()
+    print (my_dog.speak())
+    print (my_cat.speak())
 
 
 if __name__ == "__main__":
