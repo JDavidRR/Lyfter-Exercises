@@ -1,11 +1,11 @@
-Cree una función que imprima “Hola, [nombre]” dos veces:
+1- Cree una función que imprima “Hola, [nombre]” dos veces:
 Cree un decorador @repeat_twice que haga que la función decorada se ejecute dos veces seguidas, con los mismos argumentos
 Ejemplo:
 Salida:
 "Hola, Jeanca"
 "Hola, Jeanca"
 
-Cree un decorador @requires_login que:
+2- Cree un decorador @requires_login que:
 Verifique si la variable global user_logged_in es True
 Si no lo es, debe lanzar una excepción "Usuario no autenticado"
 Si lo es, la función decorada se ejecuta normalmente
@@ -18,7 +18,7 @@ user_logged_in = False
 def view_profile():
     print("Mostrando perfil del usuario")
 
-Cree una función que se llame multiply, la cual obtiene dos valores y los multiplica entre si
+3- Cree una función que se llame multiply, la cual obtiene dos valores y los multiplica entre si
 A esta función se le debe combinar dos decoradores:
 @log_call: imprime el nombre de la función, los argumentos, fecha actual y el retorno
 @validate_numbers: revisa que todos los argumentos sean numéricos
