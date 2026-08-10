@@ -6,7 +6,9 @@ def decorator_param_printer(func):
     def wrapper(*args):
         for item in args:
             print(f"Printing parameter: {item}")
-        return func(*args)
+        result = func(*args)
+        print(f"Result value: {result}")
+        return result
     return wrapper
 
 @decorator_param_printer

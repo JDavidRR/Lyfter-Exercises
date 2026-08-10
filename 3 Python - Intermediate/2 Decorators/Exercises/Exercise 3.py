@@ -4,6 +4,7 @@
 - Tenga un property de age.
 Luego cree un decorador para funciones que acepten un User como parámetro que se encargue de revisar si el User es mayor de edad y arroje una excepción de no ser así.
 """
+from datetime import date, datetime
 
 class UnderAgeError(Exception):
     def __init__(self, user):
@@ -29,10 +30,17 @@ def decorator_is_user_adult(func):
     return wrapper
 
 class User():
-    def __init__(self, name, date_of_birth, age):
+    def __init__(self, name, date_of_birth):
         self.name = name
         self.date_of_birth = date_of_birth
-        self.age = age
+
+    @property
+    def age(self) -> int:
+        today = date.today()
+        years = today.year - self.date_of_birth.year
+        if (today.month, today.day) < (self.date_of_birth.month, self.date_of_birth.day):
+            years -= 1
+        return years
 
     @decorator_is_user_adult
     def drink(self, drink : Drink):
@@ -44,10 +52,10 @@ def main():
     drink3 = Drink("Wine", "Alcoholic")
     drink4 = Drink("Orange Juice", "Non-Alcoholic")
 
-    user1 = User("Alice", "01/01/2005", 21)
-    user2 = User("Bob", "10/05/2010", 14)
-    user3 = User("Charlie", "03/03/2018", 8)
-    user4 = User("Diana", "07/07/2000", 26)
+    user1 = User("Alice", date(2005, 1, 1))
+    user2 = User("Bob", date(2010, 5, 10))
+    user3 = User("Charlie", date(2018, 3, 3))
+    user4 = User("Diana", date(2000, 7, 7))
 
     drinks = [drink1, drink2, drink3, drink4]
     users = [user1, user2, user3, user4]
