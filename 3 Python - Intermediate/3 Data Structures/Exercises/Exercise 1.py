@@ -51,8 +51,8 @@ def main():
     my_stack.push(my_first_node)
     my_stack.push(my_second_node)
     my_stack.push(my_third_node)
-    print("pop method return: ",my_stack.pop().data)
     my_stack.print_stack()
+    print("pop method return: ",my_stack.pop().data)
 
 if __name__ == "__main__":
     main()
