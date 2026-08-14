@@ -53,6 +53,7 @@ def main():
     my_stack.push(my_third_node)
     my_stack.print_stack()
     print("pop method return: ",my_stack.pop().data)
+    my_stack.print_stack()
 
 if __name__ == "__main__":
     main()
