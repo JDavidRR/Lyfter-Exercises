@@ -44,34 +44,29 @@ class Node:
 
 class Queue:
     def __init__(self, node : Node = None):
-        self.node = node
+        self.head = node
 
     def enqueue(self, data):
         new_node = Node(data)
-        if self.node == None:
-            self.node = new_node
+        if self.head == None:
+            self.head = new_node
         else:
-            temp = self.node
+            temp = self.head
             while temp.node != None:
                 temp = temp.node
             temp.node = new_node
 
     def dequeue(self):
-        if self.node == None:
-            raise IndexError("Cannot dequeue a value from an empty Queue")
+        if self.head:
+            temporal = self.head
+            self.head = self.head.node
+            print(temporal.data)
+            return temporal.data
         else:
-            temp = self.node
-            new_queue = Queue()
-            while temp.node != None:
-                new_queue.enqueue(temp.data)
-                temp = temp.node
-            value = temp.data
-            self.node = new_queue.node
-            print(value)
-            return value
+            raise IndexError("Cannot dequeue a value from an empty Queue")
 
     def print_all(self):
-        temp = self.node
+        temp = self.head
         while temp != None:
             print(temp.data)
             temp = temp.node
@@ -85,9 +80,13 @@ def main():
     my_queue.enqueue("A")
     my_queue.enqueue("B")
     my_queue.enqueue("C")
+    print("print method:")
     my_queue.print_all()
+    print("dequeue:")
     my_queue.dequeue()
+    print("dequeue:")
     my_queue.dequeue()
+    print("print method:")
     my_queue.print_all()
 
 
