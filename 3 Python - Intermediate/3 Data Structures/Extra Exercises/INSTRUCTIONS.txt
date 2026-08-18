@@ -71,3 +71,53 @@ Salida:
 ll.print_all() #20 -> 30
 
 EXERCISE 3:
+
+Lista doblemente enlazada
+Requisitos:
+Cada nodo debe tener referencia al siguiente y al anterior
+Métodos:
+append(data): Agrega al final
+Ejemplo:
+
+Entrada:
+dll.append("A")
+dll.append("B")
+dll.append("C")
+
+Salida (print_forward):
+A -> B -> C
+
+Salida (print_bacward)
+C -> B -> A
+
+prepend(data): Agrega al inicio
+Ejemplo:
+
+Entrada:
+dll.prepend("X")
+
+Salida(print_forward):
+X -> A -> B -> C
+
+Salida(print_backward):
+C -> B -> A -> X
+
+
+delete(data): Elimina el primer nodo con ese valor
+Ejemplo:
+
+Entrada:
+dll.delete("B")
+
+Salida(print_forward):
+X -> A -> C
+
+Salida(print_backward):
+C -> A -> X
+
+print_forward() y print_backward(): Imprime en ambas direcciones
+Ejemplo:
+
+Salida:
+print_forward()  #→ X -> A -> C
+print_backward() #← C -> A -> X
