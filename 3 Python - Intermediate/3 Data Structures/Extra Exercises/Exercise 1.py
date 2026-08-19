@@ -66,10 +66,15 @@ class Queue:
             raise IndexError("Cannot dequeue a value from an empty Queue")
 
     def print_all(self):
+        result = ""
         temp = self.head
         while temp != None:
-            print(temp.data)
+            if temp == self.head:
+                result = (temp.data)
+            else:
+                result += f" -> {temp.data}"
             temp = temp.node
+        print(result)
 
 
 def main():

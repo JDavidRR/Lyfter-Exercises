@@ -68,38 +68,39 @@ class LinkedList:
 
     def delete(self, data):
         temp = self.head
-        new_linked_list = LinkedList()
+        prev = self.head
         if temp:
-            not_found = True
-            while not_found:
-                if temp:
-                    if temp.data == data:
-                        if temp.node:
-                            temp = temp.node
-                            while temp:
-                                new_linked_list.insert_back(temp.data)
-                                temp = temp.node
-                            print("Deleted: ", data)
-                            not_found = False
-                        else:
-                            print("Deleted: ", data)
-                            not_found = False
+            while temp:
+                if temp.data == data:
+                    if temp == self.head:
+                        self.head = temp.node
+                        print("Deleted: ",data)
+                        return data
+                    elif temp.node == None:
+                        prev.node = None
+                        print("Deleted: ",data)
+                        return data
                     else:
-                        new_linked_list.insert_back(temp.data)
-                        temp = temp.node
-                else:
-                    print("Value not found")
-                    not_found = False
-            self.head = new_linked_list.head
+                        prev.node = temp.node
+                        print("Deleted: ",data)
+                        return data
+                prev = temp
+                temp = temp.node
+            print(f"The value {data} wasn't found")
         else:
             print("Cannot delete a value from an empty LinkedList")
 
     def print_all(self):
         temp = self.head
+        result = ""
         if temp:
             while temp:
-                print(temp.data)
+                if temp == self.head:
+                    result = (temp.data)
+                else:
+                    result += f" -> {temp.data}"
                 temp = temp.node
+            print(result)
         else:
             print("Empty LinkedList")
 
@@ -110,7 +111,7 @@ def main():
     my_linked_list.insert_front("A")
     my_linked_list.insert_back("Y")
     my_linked_list.insert_back("B")
-    my_linked_list.delete("Y")
+    my_linked_list.delete("A")
     my_linked_list.print_all()
 
 
